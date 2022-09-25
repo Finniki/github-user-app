@@ -1,19 +1,25 @@
-const UserContact = () => {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./UserContact.css";
+
+const UserContact = (props) => {
   return (
-    <div>
+    <div className="user-conact">
       <div>
-        <p>San Fransisco</p>
+        <FontAwesomeIcon icon={props.icon[0]} className="icons" />
+        <p className="icon-text">San Fransisco</p>
       </div>
       <div>
-        <p>Not Available</p>
+        <FontAwesomeIcon icon={props.icon[1]} className="icons" />
+        <p className="icon-text">Not Available</p>
+      </div>
+      <FontAwesomeIcon icon={props.icon[2]} className="icons" />
+      <div>
+        {/* <a href="#" target="_blank"> */}
+        Website
+        {/* </a> */}
       </div>
       <div>
-        <a href="#" target="_blank">
-          Website
-        </a>
-      </div>
-      <div>
-        <p>@github</p>
+        <p className="icon-text">@github</p>
       </div>
     </div>
   );

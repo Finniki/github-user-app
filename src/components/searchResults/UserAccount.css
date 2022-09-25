@@ -1,0 +1,10 @@
+.user-account {
+  font-size: 1.4rem;
+  background-color: #141c2f;
+  width: 80%;
+  border-radius: 6px;
+  padding: 4%;
+  margin: 0 0 5% auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

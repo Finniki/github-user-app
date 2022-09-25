@@ -1,13 +1,14 @@
 import UserInfo from "./searchResults/UserInfo";
 import UserAccount from "./searchResults/UserAccount";
 import UserContact from "./searchResults/UserContact";
+import "./UserDisplay.css";
 
-const UserDisplay = () => {
+const UserDisplay = (props) => {
   return (
-    <div>
-      <UserInfo />;
+    <div className="user-display">
+      <UserInfo />
       <UserAccount />
-      <UserContact />
+      <UserContact icons={props.icons} />
     </div>
   );
 };

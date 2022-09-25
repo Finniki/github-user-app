@@ -1,13 +1,20 @@
+import "./UserInfo.css";
+import merchantLogo from "./../../images/merchantLogo.jpg";
+
 const UserInfo = () => {
   return (
-    <div>
-      <img className="UserImage" src="" alt="User logo" />
-      <div>
-        <h1>The Octocat</h1>
-        <p>@octocat</p>
-        <p>This profile has no bio</p>
+    <div className="user-info">
+      <img className="UserImage" src={merchantLogo} alt="User logo" />
+      <div className="user-info__text">
+        <div className="user-info__intro">
+          <div className="user-info__name">
+            <h1>The Octocat</h1>
+            <p className="user-info__handle">@octocat</p>
+          </div>
+          <p className="user-info__bio">This profile has no bio</p>
+        </div>
+        <p className="user-info__date">Joined 25 Jan 2011</p>
       </div>
-      <p>Joined 25 Jan 2011</p>
     </div>
   );
 };

@@ -1,0 +1,36 @@
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto 5%;
+  /* border: 1px solid blue; */
+}
+.UserImage {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+.user-info__text {
+  /* font-size: 1.4rem; */
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.user-info__intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: auto;
+  padding-bottom: 0.6rem;
+}
+.user-info__handle {
+  color: #245ea9;
+  font-size: 1.4rem;
+  margin-top: 1%;
+}
+.user-info__bio {
+  font-size: 1.3rem;
+}
+.user-info__date {
+  font-size: 1.4rem;
+}
