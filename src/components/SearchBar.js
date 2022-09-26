@@ -6,7 +6,6 @@ const SearchBar = (props) => {
     <div>
       <label for="search" className="label">
         <FontAwesomeIcon icon={props.icon} className="icon" />
-        {/* <i className={props.icon}></i> */}
         <input
           id="search"
           type="text"

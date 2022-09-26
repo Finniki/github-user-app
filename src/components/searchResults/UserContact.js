@@ -3,24 +3,35 @@ import "./UserContact.css";
 
 const UserContact = (props) => {
   return (
-    <div className="user-conact">
-      <div>
-        <FontAwesomeIcon icon={props.icon[0]} className="icons" />
-        <p className="icon-text">San Fransisco</p>
-      </div>
-      <div>
-        <FontAwesomeIcon icon={props.icon[1]} className="icons" />
-        <p className="icon-text">Not Available</p>
-      </div>
-      <FontAwesomeIcon icon={props.icon[2]} className="icons" />
-      <div>
-        {/* <a href="#" target="_blank"> */}
-        Website
-        {/* </a> */}
-      </div>
-      <div>
-        <p className="icon-text">@github</p>
-      </div>
+    <div className="user-contact">
+      <FontAwesomeIcon
+        icon={props.icons[0]}
+        className="icons grid-item grid-item__1"
+      />
+      <p className="icon-text grid-item grid-item__2">
+        {props.contactInfo.location}
+      </p>
+      <FontAwesomeIcon
+        icon={props.icons[1]}
+        className="icons grid-item grid-item__3"
+      />
+      <p className="icon-text grid-item grid-item__4">
+        {props.contactInfo.twitter}
+      </p>
+      <FontAwesomeIcon
+        icon={props.icons[2]}
+        className="icons grid-item grid-item__5"
+      />
+      <a href="#" target="_blank" className="link">
+        {props.contactInfo.website}
+      </a>
+      <FontAwesomeIcon
+        icon={props.icons[3]}
+        className="icons grid-item grid-item__7"
+      />
+      <p className="icon-text grid-item grid-item__8">
+        @{props.contactInfo.job}
+      </p>
     </div>
   );
 };

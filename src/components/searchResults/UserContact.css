@@ -1,0 +1,32 @@
+.user-contact {
+  font-size: 1.4rem;
+  width: 80%;
+  padding-bottom: 2%;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 8% 42%);
+  row-gap: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: #dcdde1;
+}
+
+@media (max-width: 992px) {
+  .user-contact {
+    width: 95%;
+  }
+}
+
+@media (max-width: 576px) {
+  .user-contact {
+    width: 100%;
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    padding-bottom: 5rem;
+  }
+}

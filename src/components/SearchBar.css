@@ -10,6 +10,7 @@
 
 .input::placeholder {
   font-size: 1.5rem;
+  font-family: "Space Mono", monospace;
   color: #dcdde1;
 }
 
@@ -23,6 +24,7 @@
   top: 50%;
   transform: translate(-10%, -50%);
   font-size: 1.5rem;
+  font-family: "Space Mono", monospace;
   padding: 1rem;
   border-radius: 8px;
   color: #dcdde1;
@@ -33,7 +35,7 @@
 .icon {
   position: absolute;
   left: 4%;
-  top: 30%;
+  top: 50%;
   transform: translate(0, -50%);
   font-size: 1.8rem;
   color: #245ea9;

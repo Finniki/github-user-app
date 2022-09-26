@@ -7,15 +7,31 @@ html {
   font-size: 62.5%;
 }
 .body {
+  font-family: "Space Mono", monospace;
   min-width: 100vw;
   min-height: 100vh;
-  padding: 10%;
+  padding-top: 10%;
   color: #dcdde1;
   background-color: #141c2f;
 }
 .display-card {
-  width: 90%;
-  height: 60%;
+  width: 60%;
+  height: fit-content;
+  padding-bottom: 10rem;
   margin: 0 auto;
-  /* background-color: #1864ab; */
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 70%;
+  }
+  .display-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 80%;
+  }
 }

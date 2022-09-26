@@ -1,19 +1,19 @@
 import "./UserAccount.css";
 
-const UserAccount = () => {
+const UserAccount = (props) => {
   return (
     <div className="user-account">
       <p>Repos</p>
       <p>Followers</p>
       <p>Following</p>
       <p className="strong">
-        <strong>8</strong>
+        <strong>{props.accountInfo.repo}</strong>
       </p>
       <p className="strong">
-        <strong>3938</strong>
+        <strong>{props.accountInfo.followers}</strong>
       </p>
       <p className="strong">
-        <strong>9</strong>
+        <strong>{props.accountInfo.following}</strong>
       </p>
     </div>
   );
