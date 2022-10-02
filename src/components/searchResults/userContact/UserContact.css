@@ -4,15 +4,21 @@
   padding-bottom: 2%;
   margin-left: auto;
   display: grid;
-  grid-template-columns: repeat(2, 8% 42%);
+  grid-template-columns: 1fr 1fr;
   row-gap: 20%;
   justify-content: center;
   align-items: center;
 }
-
-.link {
+.contact-data {
   text-decoration: none;
   color: #dcdde1;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.icons {
+  width: 10%;
 }
 
 @media (max-width: 992px) {
@@ -25,8 +31,14 @@
   .user-contact {
     width: 100%;
     margin-top: 10%;
-    display: grid;
-    grid-template-columns: 1fr 10fr;
-    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
   }
 }

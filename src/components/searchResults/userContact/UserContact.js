@@ -3,33 +3,35 @@ import "./UserContact.css";
 
 const UserContact = ({
   contactInfo: { job, location, twitter, website },
-  icons,
+  icons: [locationIcon, twitterIcon, websiteIcon, jobIcon],
 }) => {
-  console.log(location);
+  const contactData = [
+    {
+      name: location,
+      icon: locationIcon,
+    },
+    {
+      name: twitter,
+      icon: twitterIcon,
+    },
+    {
+      name: website,
+      icon: websiteIcon,
+    },
+    {
+      name: job,
+      icon: jobIcon,
+    },
+  ];
+
   return (
     <div className="user-contact">
-      <FontAwesomeIcon
-        icon={icons[0]}
-        className="icons grid-item grid-item__1"
-      />
-      <p className="icon-text grid-item grid-item__2">{location}</p>
-      <FontAwesomeIcon
-        icon={icons[1]}
-        className="icons grid-item grid-item__3"
-      />
-      <p className="icon-text grid-item grid-item__4">{twitter}</p>
-      <FontAwesomeIcon
-        icon={icons[2]}
-        className="icons grid-item grid-item__5"
-      />
-      <a href="#" target="_blank" className="link">
-        {website}
-      </a>
-      <FontAwesomeIcon
-        icon={icons[3]}
-        className="icons grid-item grid-item__7"
-      />
-      <p className="icon-text grid-item grid-item__8">@{job}</p>
+      {contactData.map((data) => (
+        <a className="contact-data link" href={`www.test.com/${data.name}`}>
+          <FontAwesomeIcon icon={data.icon} className="icons" />
+          {data.name}
+        </a>
+      ))}
     </div>
   );
 };
