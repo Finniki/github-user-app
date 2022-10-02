@@ -10,7 +10,7 @@ const UserInfo = (props) => {
       />
       <div className="user-info__intro">
         <div className="user-info__name">
-          <h1>{props.userInfo.name}</h1>
+          <h2>{props.userInfo.name}</h2>
           <p className="user-info__handle">{props.userInfo.handle}</p>
         </div>
         <p className="user-info__date">{props.userInfo.date}</p>
