@@ -6,10 +6,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import "./App.css";
-import Header from "./components/Header";
-import SearchBar from "./components/SearchBar";
-import UserDisplay from "./components/UserDisplay";
-import octocat from "./images/octocat.jpg";
+import Header from "./components/userInterface/header/Header";
+import SearchBar from "./components/userInterface/searchBar/SearchBar";
+import UserDisplay from "./components/userInterface/userDisplay/UserDisplay";
+import octocat from "./assets/images/octocat.jpg";
 
 function App() {
   const UserData = {

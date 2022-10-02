@@ -1,6 +1,6 @@
-import UserInfo from "./searchResults/UserInfo";
-import UserAccount from "./searchResults/UserAccount";
-import UserContact from "./searchResults/UserContact";
+import UserInfo from "./../../searchResults/userInfo/UserInfo";
+import UserAccount from "./../../searchResults/userAccount/UserAccount";
+import UserContact from "./../../searchResults/userContact/UserContact";
 import "./UserDisplay.css";
 
 const UserDisplay = (props) => {

@@ -32,6 +32,12 @@ html {
 
 @media (max-width: 576px) {
   html {
-    font-size: 80%;
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 50%;
   }
 }
