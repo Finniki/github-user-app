@@ -1,37 +1,35 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./UserContact.css";
 
-const UserContact = (props) => {
+const UserContact = ({
+  contactInfo: { job, location, twitter, website },
+  icons,
+}) => {
+  console.log(location);
   return (
     <div className="user-contact">
       <FontAwesomeIcon
-        icon={props.icons[0]}
+        icon={icons[0]}
         className="icons grid-item grid-item__1"
       />
-      <p className="icon-text grid-item grid-item__2">
-        {props.contactInfo.location}
-      </p>
+      <p className="icon-text grid-item grid-item__2">{location}</p>
       <FontAwesomeIcon
-        icon={props.icons[1]}
+        icon={icons[1]}
         className="icons grid-item grid-item__3"
       />
-      <p className="icon-text grid-item grid-item__4">
-        {props.contactInfo.twitter}
-      </p>
+      <p className="icon-text grid-item grid-item__4">{twitter}</p>
       <FontAwesomeIcon
-        icon={props.icons[2]}
+        icon={icons[2]}
         className="icons grid-item grid-item__5"
       />
       <a href="#" target="_blank" className="link">
-        {props.contactInfo.website}
+        {website}
       </a>
       <FontAwesomeIcon
-        icon={props.icons[3]}
+        icon={icons[3]}
         className="icons grid-item grid-item__7"
       />
-      <p className="icon-text grid-item grid-item__8">
-        @{props.contactInfo.job}
-      </p>
+      <p className="icon-text grid-item grid-item__8">@{job}</p>
     </div>
   );
 };
