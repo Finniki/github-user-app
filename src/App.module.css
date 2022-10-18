@@ -14,7 +14,7 @@ html {
   color: #dcdde1;
   background-color: #141c2f;
 }
-.display-card {
+.displayCard {
   width: 60%;
   height: fit-content;
   padding-bottom: 10rem;
@@ -25,7 +25,7 @@ html {
   html {
     font-size: 70%;
   }
-  .display-card {
+  .displayCard {
     width: 90%;
   }
 }

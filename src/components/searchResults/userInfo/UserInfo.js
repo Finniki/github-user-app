@@ -1,20 +1,20 @@
-import "./UserInfo.css";
+import styles from "./UserInfo.module.css";
 
 const UserInfo = ({ userInfo: { image, name, handle, bio, date } }) => {
   // console.log();
   //console.log("PROPS: ", name, handle, date, bio);
   // console.log("DAT:", bio);
   return (
-    <div className="user-info">
-      <img className="user-image" src={image} alt="User avatar" />
-      <div className="user-info__intro">
-        <div className="user-info__name">
+    <div className={styles.userInfo}>
+      <img className={styles.userImage} src={image} alt="User avatar" />
+      <div className={styles.userInfoIntro}>
+        <div className={styles.userInfoName}>
           <h2>{name}</h2>
-          <p className="user-info__handle">{handle}</p>
+          <p className={styles.userInfoHandle}>{handle}</p>
         </div>
-        <p className="user-info__date">{date}</p>
+        <p className={styles.userInfoDate}>{date}</p>
       </div>
-      <p className="user-info__bio">{bio} </p>
+      <p className={styles.userInfoBio}>{bio} </p>
     </div>
   );
 };

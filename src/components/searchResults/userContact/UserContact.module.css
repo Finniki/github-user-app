@@ -1,4 +1,4 @@
-.user-contact {
+.userContact {
   font-size: 1.4rem;
   width: 80%;
   padding-bottom: 2%;
@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
 }
-.contact-data {
+.contactData {
   text-decoration: none;
   color: #dcdde1;
   width: 100%;
@@ -22,20 +22,20 @@
 }
 
 @media (max-width: 992px) {
-  .user-contact {
+  .userContact {
     width: 95%;
   }
 }
 
 @media (max-width: 576px) {
-  .user-contact {
+  .userContact {
     width: 100%;
     margin-top: 10%;
   }
 }
 
 @media (max-width: 480px) {
-  .user-contact {
+  .userContact {
     display: flex;
     flex-direction: column;
     gap: 1rem;

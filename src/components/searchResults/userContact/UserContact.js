@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./UserContact.css";
+import styles from "./UserContact.module.css";
 
 const UserContact = ({
   contactInfo: { job, location, twitter, website },
@@ -27,14 +27,14 @@ const UserContact = ({
   ];
 
   return (
-    <div className="user-contact">
+    <div className={styles.userContact}>
       {contactData.map((data) => (
         <a
           key={data.name}
-          className="contact-data link"
+          className={styles.contactData}
           href={`www.test.com/${data.name}`}
         >
-          <FontAwesomeIcon icon={data.icon} className="icons" />
+          <FontAwesomeIcon icon={data.icon} className={styles.icons} />
           {data.name}
         </a>
       ))}

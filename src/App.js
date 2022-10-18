@@ -6,7 +6,7 @@ import {
   faBuilding,
 } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import "./App.css";
+import styles from "./App.module.css";
 import Header from "./components/userInterface/Header/Header";
 import SearchBar from "./components/userInterface/SearchBar/SearchBar";
 import UserDisplay from "./components/userInterface/UserDisplay/UserDisplay";
@@ -75,7 +75,7 @@ function App() {
           image: `${avatar_url}`,
           name: `${name}`,
           handle: `${login}`,
-          bio: `${bio}`,
+          bio: `${bio || "This profiile has no bio"}`,
           date: `Joined ${new Date(created_at).toLocaleString("en-US", {
             day: "2-digit",
             month: "short",
@@ -101,8 +101,8 @@ function App() {
   console.log("old:", apiData);
 
   return (
-    <div className="body">
-      <div className="display-card">
+    <div className={styles.body}>
+      <div className={styles.displayCard}>
         <Header />
         <SearchBar icon={faMagnifyingGlass} onClick={findUser} />
         <UserDisplay icons={ContactIcons} userData={apiData} />
