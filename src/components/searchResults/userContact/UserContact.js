@@ -5,6 +5,8 @@ const UserContact = ({
   contactInfo: { job, location, twitter, website },
   icons: [locationIcon, twitterIcon, websiteIcon, jobIcon],
 }) => {
+  // console.log(location);
+
   const contactData = [
     {
       name: location,
@@ -27,7 +29,11 @@ const UserContact = ({
   return (
     <div className="user-contact">
       {contactData.map((data) => (
-        <a className="contact-data link" href={`www.test.com/${data.name}`}>
+        <a
+          key={data.name}
+          className="contact-data link"
+          href={`www.test.com/${data.name}`}
+        >
           <FontAwesomeIcon icon={data.icon} className="icons" />
           {data.name}
         </a>

@@ -1,21 +1,20 @@
 import "./UserInfo.css";
 
-const UserInfo = (props) => {
+const UserInfo = ({ userInfo: { image, name, handle, bio, date } }) => {
+  // console.log();
+  //console.log("PROPS: ", name, handle, date, bio);
+  // console.log("DAT:", bio);
   return (
     <div className="user-info">
-      <img
-        className="user-image"
-        src={props.userInfo.image.octocat}
-        alt="User avatar"
-      />
+      <img className="user-image" src={image} alt="User avatar" />
       <div className="user-info__intro">
         <div className="user-info__name">
-          <h2>{props.userInfo.name}</h2>
-          <p className="user-info__handle">{props.userInfo.handle}</p>
+          <h2>{name}</h2>
+          <p className="user-info__handle">{handle}</p>
         </div>
-        <p className="user-info__date">{props.userInfo.date}</p>
+        <p className="user-info__date">{date}</p>
       </div>
-      <p className="user-info__bio">{props.userInfo.bio} </p>
+      <p className="user-info__bio">{bio} </p>
     </div>
   );
 };

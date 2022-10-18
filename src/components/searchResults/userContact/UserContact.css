@@ -13,7 +13,7 @@
   text-decoration: none;
   color: #dcdde1;
   width: 100%;
-  display: flex;
+  display: inline-flex;
   gap: 1rem;
   align-items: center;
 }
