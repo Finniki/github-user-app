@@ -10,9 +10,11 @@ const SearchBar = (props) => {
     //retrieve an store user input
     const value = inputRef.current.value;
     console.log("ref: ", value);
+    
+    //call the function from app.js and pass the value in
     props.onClick(value);
     inputRef.current.value = " ";
-    // input.innerHTML = "";
+    
   };
 
   return (
