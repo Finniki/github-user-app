@@ -5,8 +5,6 @@ const UserContact = ({
   contactInfo: { job, location, twitter, website },
   icons: [locationIcon, twitterIcon, websiteIcon, jobIcon],
 }) => {
-  // console.log(location);
-
   const contactData = [
     {
       name: location,
