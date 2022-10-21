@@ -11,7 +11,7 @@ const SearchBar = (props) => {
     const value = inputRef.current.value;
     console.log("ref: ", value);
     props.onClick(value);
-    //inputRef.current.value = " ";
+    inputRef.current.value = " ";
     // input.innerHTML = "";
   };
 
