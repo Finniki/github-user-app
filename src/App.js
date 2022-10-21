@@ -7,9 +7,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import styles from "./App.module.css";
-import Header from "./components/userInterface/Header/Header";
-import SearchBar from "./components/userInterface/SearchBar/SearchBar";
-import UserDisplay from "./components/userInterface/UserDisplay/UserDisplay";
+import Header from "./components/UserInterface/Header/Header";
+import SearchBar from "./components/UserInterface/SearchBar/SearchBar";
+import UserDisplay from "./components/UserInterface/UserDisplay/UserDisplay";
 //import octocat from "./assets/images/octocat.jpg";
 
 function App() {
@@ -72,26 +72,28 @@ function App() {
       // console.log("comp", blog);
       setApiData({
         profile: {
-          image: `${avatar_url}`,
-          name: `${name}`,
-          handle: `${login}`,
-          bio: `${bio || "This profiile has no bio"}`,
-          date: `Joined ${new Date(created_at).toLocaleString("en-US", {
-            day: "2-digit",
-            month: "short",
-            year: "numeric",
-          })}`,
+          image: `${avatar_url || "Not Available"}`,
+          name: `${name || "Not Available"}`,
+          handle: `${login || "Not Available"}`,
+          bio: `${bio || "This profile has no bio"}`,
+          date: `Joined ${
+            new Date(created_at).toLocaleString("en-US", {
+              day: "2-digit",
+              month: "short",
+              year: "numeric",
+            }) || "Not Available"
+          }`,
         },
         account: {
-          repo: `${public_repos}`,
-          followers: `${followers}`,
-          following: `${following}`,
+          repo: `${public_repos || "-"}`,
+          followers: `${followers || "-"}`,
+          following: `${following || "-"}`,
         },
         contact: {
-          location: `${location}`,
-          twitter: `${twitter_username}`,
-          website: `${blog}`,
-          job: `${company}`,
+          location: `${location || "Not Available"}`,
+          twitter: `${twitter_username || "Not Available"}`,
+          website: `${blog || "Not Available"}`,
+          job: `${company || "Not Available"}`,
         },
       });
     } catch (err) {
