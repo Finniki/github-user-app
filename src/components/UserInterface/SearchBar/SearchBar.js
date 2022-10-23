@@ -8,7 +8,7 @@ const SearchBar = (props) => {
   const ClickHandler = () => {
     const value = ref.current.value;
     console.log(value);
-
+    props.searchHandler(value);
     ref.current.value = "";
   };
 
