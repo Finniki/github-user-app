@@ -26,9 +26,9 @@ const UserContact = ({
 
   return (
     <div className={styles.userContact}>
-      {contactData.map((data) => (
+      {contactData.map((data, index) => (
         <a
-          key={data.name}
+          key={index}
           className={styles.contactData}
           href={`www.test.com/${data.name}`}
         >
