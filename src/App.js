@@ -13,8 +13,6 @@ import UserDisplay from "./components/UserInterface/UserDisplay/UserDisplay";
 import octocat from "./assets/images/octocat.jpg";
 
 function App() {
-  const [apiData, setApiData] = useState([]);
-
   const UserData = {
     profile: {
       image: octocat,
@@ -35,6 +33,7 @@ function App() {
       job: "github",
     },
   };
+  const [apiData, setApiData] = useState(UserData);
 
   const ContactIcons = [faLocationDot, faTwitter, faLink, faBuilding];
 
