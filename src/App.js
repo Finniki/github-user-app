@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   faLink,
   faLocationDot,
@@ -12,6 +13,8 @@ import UserDisplay from "./components/UserInterface/UserDisplay/UserDisplay";
 import octocat from "./assets/images/octocat.jpg";
 
 function App() {
+  const [apiData, setApiData] = useState([]);
+
   const UserData = {
     profile: {
       image: octocat,
@@ -35,13 +38,56 @@ function App() {
 
   const ContactIcons = [faLocationDot, faTwitter, faLink, faBuilding];
 
-  const findUser = async (username) => {
+  const searchHandler = async (username) => {
     try {
       const resUser = await fetch(`https://api.github.com/users/${username}`);
       if (!resUser.ok) throw new Error("Problem getting user data");
       console.log(resUser);
-    } catch {
-      console.error("An error occurred");
+      const data = await resUser.json();
+
+      const {
+        avatar_url,
+        name,
+        login,
+        created_at,
+        bio,
+        public_repos,
+        followers,
+        following,
+        location,
+        twitter_username,
+        blog,
+        company,
+      } = data;
+
+      setApiData({
+        profile: {
+          image: `${avatar_url}`,
+          name: `${name || "Not Available"}`,
+          handle: `${login || "Not Available"}`,
+          bio: `${bio || "This profile has no bio"}`,
+          date: `Joined ${
+            new Date(created_at).toLocaleString("en-US", {
+              day: "2-digit",
+              month: "short",
+              year: "numeric",
+            }) || "Not Available"
+          }`,
+        },
+        account: {
+          repo: `${public_repos || "-"}`,
+          followers: `${followers || "-"}`,
+          following: `${following || "-"}`,
+        },
+        contact: {
+          location: `${location || "Not Available"}`,
+          twitter: `${twitter_username || "Not Available"}`,
+          website: `${blog || "Not Available"}`,
+          job: `${company || "Not Available"}`,
+        },
+      });
+    } catch (err) {
+      console.error(`An error occurred: ${err}`);
     }
   };
 
@@ -49,8 +95,8 @@ function App() {
     <div className={styles.body}>
       <div className={styles.displayCard}>
         <Header />
-        <SearchBar icon={faMagnifyingGlass} searchHandler={findUser} />
-        <UserDisplay icons={ContactIcons} userData={UserData} />
+        <SearchBar icon={faMagnifyingGlass} searchHandler={searchHandler} />
+        <UserDisplay icons={ContactIcons} userData={apiData} />
       </div>
     </div>
   );
