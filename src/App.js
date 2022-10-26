@@ -86,6 +86,7 @@ function App() {
         },
       });
     } catch (err) {
+      setApiData({});
       console.error(`An error occurred: ${err}`);
     }
   };
