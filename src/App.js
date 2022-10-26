@@ -37,7 +37,7 @@ function App() {
 
   const ContactIcons = [faLocationDot, faTwitter, faLink, faBuilding];
 
-  const searchHandler = async (username) => {
+  const fetchUser = async (username) => {
     try {
       const resUser = await fetch(`https://api.github.com/users/${username}`);
       if (!resUser.ok) throw new Error("Problem getting user data");
@@ -86,6 +86,7 @@ function App() {
         },
       });
     } catch (err) {
+      setApiData({});
       console.error(`An error occurred: ${err}`);
     }
   };
@@ -94,7 +95,7 @@ function App() {
     <div className={styles.body}>
       <div className={styles.displayCard}>
         <Header />
-        <SearchBar icon={faMagnifyingGlass} searchHandler={searchHandler} />
+        <SearchBar icon={faMagnifyingGlass} fetchUser={fetchUser} />
         <UserDisplay icons={ContactIcons} userData={apiData} />
       </div>
     </div>
