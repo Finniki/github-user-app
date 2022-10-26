@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const SearchBar = (props) => {
   const ref = useRef("");
   // console.log(value);
-  const ClickHandler = () => {
+  const handleOnClick = () => {
     const value = ref.current.value;
     console.log(value);
     props.searchHandler(value);
