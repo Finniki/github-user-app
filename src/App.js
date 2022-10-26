@@ -1,11 +1,4 @@
 import { useState } from "react";
-import {
-  faLink,
-  faLocationDot,
-  faMagnifyingGlass,
-  faBuilding,
-} from "@fortawesome/free-solid-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import styles from "./App.module.css";
 import Header from "./components/UserInterface/Header/Header";
 import SearchBar from "./components/UserInterface/SearchBar/SearchBar";
@@ -34,8 +27,6 @@ function App() {
     },
   };
   const [apiData, setApiData] = useState(UserData);
-
-  const ContactIcons = [faLocationDot, faTwitter, faLink, faBuilding];
 
   const fetchUser = async (username) => {
     try {
@@ -95,8 +86,8 @@ function App() {
     <div className={styles.body}>
       <div className={styles.displayCard}>
         <Header />
-        <SearchBar icon={faMagnifyingGlass} fetchUser={fetchUser} />
-        <UserDisplay icons={ContactIcons} userData={apiData} />
+        <SearchBar fetchUser={fetchUser} />
+        <UserDisplay userData={apiData} />
       </div>
     </div>
   );
