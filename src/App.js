@@ -37,7 +37,7 @@ function App() {
 
   const ContactIcons = [faLocationDot, faTwitter, faLink, faBuilding];
 
-  const searchHandler = async (username) => {
+  const fetchUser = async (username) => {
     try {
       const resUser = await fetch(`https://api.github.com/users/${username}`);
       if (!resUser.ok) throw new Error("Problem getting user data");
