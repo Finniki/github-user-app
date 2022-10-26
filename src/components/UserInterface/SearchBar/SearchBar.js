@@ -5,10 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SearchBar = ({ fetchUser }) => {
   const ref = useRef("");
-  // console.log(value);
   const handleOnClick = () => {
     const value = ref.current.value;
-    console.log(value);
     fetchUser(value);
     ref.current.value = "";
   };
