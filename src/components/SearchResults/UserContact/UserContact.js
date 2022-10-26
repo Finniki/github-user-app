@@ -7,22 +7,22 @@ import {
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import styles from "./UserContact.module.css";
 
-const UserContact = ({ contactInfo: { job, location, twitter, website } }) => {
+const UserContact = ({ location, twitter_username, blog, company }) => {
   const contactData = [
     {
-      name: location,
+      name: `${location || "Not Available"}`,
       icon: faLocationDot,
     },
     {
-      name: twitter,
+      name: `${twitter_username || "Not Available"}`,
       icon: faTwitter,
     },
     {
-      name: website,
+      name: `${blog || "Not Available"}`,
       icon: faLink,
     },
     {
-      name: job,
+      name: `${company || "Not Available"}`,
       icon: faBuilding,
     },
   ];
