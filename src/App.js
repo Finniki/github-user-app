@@ -26,7 +26,7 @@ function App() {
       job: "github",
     },
   };
-  const [apiData, setApiData] = useState(UserData);
+  const [apiData, setApiData] = useState({});
 
   const fetchUser = async (username) => {
     try {
@@ -50,32 +50,7 @@ function App() {
         company,
       } = data;
 
-      setApiData({
-        profile: {
-          image: `${avatar_url}`,
-          name: `${name || "Not Available"}`,
-          handle: `${login || "Not Available"}`,
-          bio: `${bio || "This profile has no bio"}`,
-          date: `Joined ${
-            new Date(created_at).toLocaleString("en-US", {
-              day: "2-digit",
-              month: "short",
-              year: "numeric",
-            }) || "Not Available"
-          }`,
-        },
-        account: {
-          repo: `${public_repos || "-"}`,
-          followers: `${followers || "-"}`,
-          following: `${following || "-"}`,
-        },
-        contact: {
-          location: `${location || "Not Available"}`,
-          twitter: `${twitter_username || "Not Available"}`,
-          website: `${blog || "Not Available"}`,
-          job: `${company || "Not Available"}`,
-        },
-      });
+      setApiData(data);
     } catch (err) {
       setApiData({});
       console.error(`An error occurred: ${err}`);
