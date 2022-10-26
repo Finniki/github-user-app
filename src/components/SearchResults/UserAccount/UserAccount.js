@@ -1,19 +1,19 @@
 import styles from "./UserAccount.module.css";
 
-const UserAccount = (props) => {
+const UserAccount = ({ public_repos, followers, following }) => {
   return (
     <div className={styles.userAccount}>
       <p>Repos</p>
       <p>Followers</p>
       <p>Following</p>
       <p className={styles.strong}>
-        <strong>{props.accountInfo.repo}</strong>
+        <strong>{`${public_repos || "-"}`}</strong>
       </p>
       <p className={styles.strong}>
-        <strong>{props.accountInfo.followers}</strong>
+        <strong>{`${followers || "-"}`}</strong>
       </p>
       <p className={styles.strong}>
-        <strong>{props.accountInfo.following}</strong>
+        <strong>{`${following || "-"}`}</strong>
       </p>
     </div>
   );
