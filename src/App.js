@@ -35,21 +35,6 @@ function App() {
       console.log(resUser);
       const data = await resUser.json();
 
-      const {
-        avatar_url,
-        name,
-        login,
-        created_at,
-        bio,
-        public_repos,
-        followers,
-        following,
-        location,
-        twitter_username,
-        blog,
-        company,
-      } = data;
-
       setApiData(data);
     } catch (err) {
       setApiData({});
