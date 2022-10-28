@@ -14,7 +14,13 @@ const UserInfo = ({
           }`}</p>
         </div>
         <p className={styles.userInfoDate}>{`Joined ${
-          new Date(created_at).toLocaleString("en-US", {
+          const formattedDate = created_at
+    ? new Date(created_at).toLocaleString("en-US", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      })
+    : "YY/MM/DD";
             day: "2-digit",
             month: "short",
             year: "numeric",
