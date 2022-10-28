@@ -19,16 +19,12 @@ const UserInfo = ({ avatar_url, name, login, bio, created_at }) => {
       />
       <div className={styles.userInfoIntro}>
         <div className={styles.userInfoName}>
-          <h2>{`${name || "Not Available"}`}</h2>
-          <p className={styles.userInfoHandle}>{`${
-            login || "Not Available"
-          }`}</p>
+          <h2>{name || "Not Available"}</h2>
+          <p className={styles.userInfoHandle}>{login || "Not Available"}</p>
         </div>
         <p className={styles.userInfoDate}>{formattedDate}</p>
       </div>
-      <p className={styles.userInfoBio}>
-        {`${bio || "This profile has no bio"}`}
-      </p>
+      <p className={styles.userInfoBio}>{bio || "This profile has no bio"}</p>
     </div>
   );
 };

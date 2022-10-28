@@ -14,15 +14,15 @@ const UserContact = ({ location, twitter_username, blog, company }) => {
       icon: faLocationDot,
     },
     {
-      name: `${twitter_username || "Not Available"}`,
+      name: twitter_username || "Not Available",
       icon: faTwitter,
     },
     {
-      name: `${blog || "Not Available"}`,
+      name: blog || "Not Available",
       icon: faLink,
     },
     {
-      name: `${company || "Not Available"}`,
+      name: company || "Not Available",
       icon: faBuilding,
     },
   ];
