@@ -7,7 +7,7 @@ const UserAccount = ({ public_repos, followers, following }) => {
       <p>Followers</p>
       <p>Following</p>
       <p className={styles.strong}>
-        <strong>{`${public_repos || "-"}`}</strong>
+        <strong>{public_repos || "-"}</strong>
       </p>
       <p className={styles.strong}>
         <strong>{`${followers || "-"}`}</strong>
