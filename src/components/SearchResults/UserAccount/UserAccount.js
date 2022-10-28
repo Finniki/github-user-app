@@ -1,6 +1,7 @@
 import styles from "./UserAccount.module.css";
 
 const UserAccount = ({ public_repos, followers, following }) => {
+  //console.log(public_repos);
   return (
     <div className={styles.userAccount}>
       <p>Repos</p>
@@ -10,10 +11,10 @@ const UserAccount = ({ public_repos, followers, following }) => {
         <strong>{public_repos || "-"}</strong>
       </p>
       <p className={styles.strong}>
-        <strong>{`${followers || "-"}`}</strong>
+        <strong>{followers || "-"}</strong>
       </p>
       <p className={styles.strong}>
-        <strong>{`${following || "-"}`}</strong>
+        <strong>{following || "-"}</strong>
       </p>
     </div>
   );

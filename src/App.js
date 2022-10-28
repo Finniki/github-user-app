@@ -12,7 +12,6 @@ function App() {
       const resUser = await fetch(`https://api.github.com/users/${username}`);
       if (!resUser.ok) throw new Error("Problem getting user data");
       const data = await resUser.json();
-
       setApiData(data);
     } catch (err) {
       setApiData({});

@@ -18,18 +18,34 @@ const UserDisplay = ({ userData }) => {
     blog,
     company,
   } = userData;
-
+  console.log(userData, name);
   const displayData = {
-    profile: [avatar_url, name, login, created_at, bio],
-    account: [public_repos, followers, following],
-    contact: [location, twitter_username, blog, company],
+    profile: {
+      avatar_url,
+      name,
+      login,
+      created_at,
+      bio,
+    },
+    account: {
+      public_repos,
+      followers,
+      following,
+    },
+    contact: {
+      location,
+      twitter_username,
+      blog,
+      company,
+    },
   };
+  console.log(displayData.account, displayData.profile, displayData.contact);
 
   return (
     <div className={styles.userDisplay}>
-      <UserInfo userInfo={{ ...displayData.profile }} />
-      <UserAccount accountInfo={{ ...displayData.account }} />
-      <UserContact contactInfo={{ ...displayData.contact }} />
+      <UserInfo {...displayData.profile} />
+      <UserAccount {...displayData.account} />
+      <UserContact {...displayData.contact} />
     </div>
   );
 };

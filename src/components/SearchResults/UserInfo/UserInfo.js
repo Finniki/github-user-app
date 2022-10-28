@@ -1,9 +1,7 @@
 import styles from "./UserInfo.module.css";
 import octocat from "./../../../assets/images/octocat.jpg";
 
-const UserInfo = ({
-  userInfo: { avatar_url, name, login, bio, created_at },
-}) => {
+const UserInfo = ({ avatar_url, name, login, bio, created_at }) => {
   const formattedDate = created_at
     ? new Date(created_at).toLocaleString("en-US", {
         day: "2-digit",
