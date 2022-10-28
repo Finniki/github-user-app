@@ -1,34 +1,37 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLink,
+  faLocationDot,
+  faBuilding,
+} from "@fortawesome/free-solid-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import styles from "./UserContact.module.css";
 
-const UserContact = ({
-  contactInfo: { job, location, twitter, website },
-  icons: [locationIcon, twitterIcon, websiteIcon, jobIcon],
-}) => {
+const UserContact = ({ location, twitter_username, blog, company }) => {
   const contactData = [
     {
-      name: location,
-      icon: locationIcon,
+      name: location || "Not Available",
+      icon: faLocationDot,
     },
     {
-      name: twitter,
-      icon: twitterIcon,
+      name: twitter_username || "Not Available",
+      icon: faTwitter,
     },
     {
-      name: website,
-      icon: websiteIcon,
+      name: blog || "Not Available",
+      icon: faLink,
     },
     {
-      name: job,
-      icon: jobIcon,
+      name: company || "Not Available",
+      icon: faBuilding,
     },
   ];
 
   return (
     <div className={styles.userContact}>
-      {contactData.map((data) => (
+      {contactData.map((data, index) => (
         <a
-          key={data.name}
+          key={index}
           className={styles.contactData}
           href={`www.test.com/${data.name}`}
         >
