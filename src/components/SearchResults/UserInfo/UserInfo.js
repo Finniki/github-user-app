@@ -5,7 +5,7 @@ const UserInfo = ({
 }) => {
   return (
     <div className={styles.userInfo}>
-      <img className={styles.userImage} src={avatar_url} alt="User avatar" />
+      <img className={styles.userImage} src={avatar_url || octocat} alt="User avatar" />
       <div className={styles.userInfoIntro}>
         <div className={styles.userInfoName}>
           <h2>{`${name || "Not Available"}`}</h2>
