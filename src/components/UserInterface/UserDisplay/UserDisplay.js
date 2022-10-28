@@ -24,7 +24,7 @@ const UserDisplay = ({ userData }) => {
     account: [public_repos, followers, following],
     contact: [location, twitter_username, blog, company],
   };
-  console.log("data: ", userData);
+
   return (
     <div className={styles.userDisplay}>
       <UserInfo userInfo={{ ...displayData.profile }} />
