@@ -18,7 +18,7 @@ const UserDisplay = ({ userData }) => {
     blog,
     company,
   } = userData;
-  console.log(userData, name);
+
   const displayData = {
     profile: {
       avatar_url,
@@ -39,7 +39,6 @@ const UserDisplay = ({ userData }) => {
       company,
     },
   };
-  console.log(displayData.account, displayData.profile, displayData.contact);
 
   return (
     <div className={styles.userDisplay}>

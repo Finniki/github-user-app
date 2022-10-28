@@ -1,7 +1,6 @@
 import styles from "./UserAccount.module.css";
 
 const UserAccount = ({ public_repos, followers, following }) => {
-  //console.log(public_repos);
   return (
     <div className={styles.userAccount}>
       <p>Repos</p>
