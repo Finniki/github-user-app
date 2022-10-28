@@ -1,4 +1,5 @@
 import styles from "./UserInfo.module.css";
+import octocat from "./../../../assets/images/octocat.jpg";
 
 const UserInfo = ({
   userInfo: { avatar_url, name, login, bio, created_at },
