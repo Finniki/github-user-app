@@ -10,7 +10,7 @@ import styles from "./UserContact.module.css";
 const UserContact = ({ location, twitter_username, blog, company }) => {
   const contactData = [
     {
-      name: `${location || "Not Available"}`,
+      name: location || "Not Available",
       icon: faLocationDot,
     },
     {
